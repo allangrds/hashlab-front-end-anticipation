@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CurrencyInput should render and be updated correctly 1`] = `
+<div>
+  <fieldset
+    class="fieldset"
+  >
+    <label
+      class="label"
+      for="Aname"
+    >
+      Esse é o label
+       
+      *
+    </label>
+    <input
+      class="input"
+      id="Aname"
+      type="text"
+      value="R$1,23"
+    />
+    <p
+      class="tip"
+    >
+      Máximo de 12 parcelas
+    </p>
+  </fieldset>
+</div>
+`;
+
+exports[`CurrencyInput should render with error message 1`] = `
+<div>
+  <fieldset
+    class="fieldset"
+  >
+    <label
+      class="label"
+      for="Aname"
+    >
+      Esse é o label
+       
+      *
+    </label>
+    <input
+      class="input input-error"
+      id="Aname"
+      type="text"
+      value="R$0,00"
+    />
+    <p
+      class="error"
+    >
+      Mensagem de erro
+    </p>
+  </fieldset>
+</div>
+`;
