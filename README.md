@@ -36,3 +36,8 @@ Criar a versão final do projeto para produção - de forma a otimizar o projeto
 ## O que foi utilizado
 
 - Create React App: bootstrap do projeto;
+- Eslint & Stylelint
+- Commitzen & Commitlint
+- Editorconfig
+- Prettier
+- CI(Build, test)
