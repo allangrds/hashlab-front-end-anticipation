@@ -1,4 +1,5 @@
 @import "../../assets/css/settings/colors.css";
+@import "../../assets/css/tools/fonts.css";
 
 .box {
   background: var(--color-white);
