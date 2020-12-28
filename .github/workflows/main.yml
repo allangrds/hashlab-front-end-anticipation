@@ -16,8 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install modules
-      run: cp .env.example .env
-      run: yarn
+      run: cp .env.example .env && yarn
     - name: Build project
       run: yarn build
 
@@ -26,7 +25,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install modules
-      run: yarn
+      run: cp .env.example .env && yarn
     - name: Run ESLint and Stylelint
       run: yarn lint
 
