@@ -1,0 +1,48 @@
+@import "../../assets/settings/colors.css";
+
+.fieldset {
+  border: none;
+}
+
+.label {
+  font-family: "Source Sans Pro", sans-serif;
+  color: var(--color-gray-1);
+  font-size: 14px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.input {
+  font-family: "Source Sans Pro", sans-serif;
+  color: var(--color-black);
+  font-size: 14px;
+  padding: 10px 0 9px 14px;
+  border: 1px solid var(--color-gray-4);
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+}
+
+.input:focus {
+  border-color: var(--color-blue-3);
+}
+
+.input-error {
+  border-color: var(--color-error);
+}
+
+.tip {
+  color: var(--color-gray-2);
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 11px;
+  margin-top: 3px;
+  margin-bottom: 0;
+}
+
+.error {
+  color: var(--color-error);
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 11px;
+  margin-top: 3px;
+  margin-bottom: 0;
+}
