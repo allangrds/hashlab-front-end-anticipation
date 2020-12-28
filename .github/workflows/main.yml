@@ -16,9 +16,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install modules
+      run: cp .env.example .env
       run: yarn
     - name: Build project
       run: yarn build
+
   lint:
     runs-on: ubuntu-latest
     steps:
@@ -27,3 +29,19 @@ jobs:
       run: yarn
     - name: Run ESLint and Stylelint
       run: yarn lint
+
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ '12' ]
+    name: Running tests on node ${{ matrix.node }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+      - run: cp .env.example .env
+      - run: yarn
+      - run: yarn test
