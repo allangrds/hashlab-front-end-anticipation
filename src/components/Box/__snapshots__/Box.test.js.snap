@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Box should render and be updated correctly 1`] = `
+<div>
+  <div
+    class="box"
+  >
+    <p>
+      Olá mundo
+    </p>
+  </div>
+</div>
+`;
