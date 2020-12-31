@@ -51,7 +51,7 @@ test('Input with type "money" should render and be updated correctly', () => {
     tip: 'Máximo de 12 parcelas',
     type: 'money',
   }
-  const initialValue = 'R$0,00'
+  const initialValue = ''
   const newRawValue = '123'
   const newFormatedValue = 'R$1,23'
 

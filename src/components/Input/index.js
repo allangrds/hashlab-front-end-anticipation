@@ -60,7 +60,7 @@ const Input = ({
 }
 
 Input.propTypes = {
-  className: PropTypes.node.isRequired,
+  className: PropTypes.node,
   errorMessage: PropTypes.string,
   id: PropTypes.string,
   label: PropTypes.string.isRequired,
@@ -76,6 +76,7 @@ Input.propTypes = {
 }
 
 Input.defaultProps = {
+  className: null,
   errorMessage: null,
   id: null,
   required: false,
