@@ -3,7 +3,7 @@ import ValueToReceive from '../containers/Main/ValueToReceive'
 
 export default {
   component: ValueToReceive,
-  title: 'Example/ValueToReceive',
+  title: 'Containers/Main/ValueToReceive',
 }
 
 const Template = args => <ValueToReceive {...args} />

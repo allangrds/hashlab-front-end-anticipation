@@ -3,7 +3,7 @@ import { Box } from '../components'
 
 export default {
   component: Box,
-  title: 'Example/Box',
+  title: 'Components/Box',
 }
 
 const Template = args => (

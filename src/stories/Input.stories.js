@@ -5,7 +5,7 @@ import { Input } from '../components'
 
 export default {
   component: Input,
-  title: 'Example/Input',
+  title: 'Components/Input',
 }
 
 const Template = args => <Input {...args} />

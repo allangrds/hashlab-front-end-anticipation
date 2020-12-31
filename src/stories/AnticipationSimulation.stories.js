@@ -3,7 +3,7 @@ import AnticipationSimulation from '../containers/Main/AnticipationSimulation'
 
 export default {
   component: AnticipationSimulation,
-  title: 'Example/AnticipationSimulation',
+  title: 'Containers/Main/AnticipationSimulation',
 }
 
 const Template = () => (
