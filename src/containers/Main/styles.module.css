@@ -1,0 +1,20 @@
+.wrapper {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.box {
+  display: grid;
+  max-width: 608px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 575px) {
+
+  .box {
+    grid-template-columns: auto 231px;
+  }
+}
