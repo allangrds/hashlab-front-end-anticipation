@@ -7,6 +7,7 @@ import DefaultInput from './DefaultInput'
 import styles from './styles.module.css'
 
 const Input = ({
+  className,
   errorMessage,
   id,
   label,
@@ -27,13 +28,16 @@ const Input = ({
   const SelectedInput = type === 'money'
     ? MonetaryInput
     : DefaultInput
+  const fieldsetClassName = className
+    ? classNames(styles.fieldset, className)
+    : styles.fieldset
 
   function handleOnChange (obj) {
     onChange(obj)
   }
 
   return (
-    <fieldset className={styles.fieldset}>
+    <fieldset className={fieldsetClassName}>
       <label
         className={styles.label}
         htmlFor={id}
@@ -56,6 +60,7 @@ const Input = ({
 }
 
 Input.propTypes = {
+  className: PropTypes.node,
   errorMessage: PropTypes.string,
   id: PropTypes.string,
   label: PropTypes.string.isRequired,
@@ -71,6 +76,7 @@ Input.propTypes = {
 }
 
 Input.defaultProps = {
+  className: null,
   errorMessage: null,
   id: null,
   required: false,
