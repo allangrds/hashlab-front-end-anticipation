@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should render with error message 1`] = `
+<div>
+  <fieldset
+    class="fieldset"
+  >
+    <label
+      class="label"
+      for="oId"
+    >
+      Esse é o label
+       
+      *
+    </label>
+    <input
+      class="input input-error"
+      id="oId"
+      name="input"
+      type="text"
+    />
+    <p
+      class="error"
+    >
+      Mensagem de erro
+    </p>
+  </fieldset>
+</div>
+`;
+
+exports[`Input with type "money" should render and be updated correctly 1`] = `
+<div>
+  <fieldset
+    class="fieldset"
+  >
+    <label
+      class="label"
+      for="oId"
+    >
+      Esse é o label
+       
+      *
+    </label>
+    <input
+      class="input"
+      id="oId"
+      type="text"
+      value="R$1,23"
+    />
+    <p
+      class="tip"
+    >
+      Máximo de 12 parcelas
+    </p>
+  </fieldset>
+</div>
+`;
+
+exports[`Input with type "text" should render and be updated correctly 1`] = `
+<div>
+  <fieldset
+    class="fieldset"
+  >
+    <label
+      class="label"
+      for="idLegal"
+    >
+      Esse é o label
+       
+      *
+    </label>
+    <input
+      class="input"
+      id="idLegal"
+      name="input"
+      type="text"
+    />
+    <p
+      class="tip"
+    >
+      Máximo de 12 parcelas
+    </p>
+  </fieldset>
+</div>
+`;
