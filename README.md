@@ -12,8 +12,8 @@ Pequena descrição do repositório.
 - [O que foi utilizado](#o-que-foi-utilizado)
 
 ## Requisitos
-- Node 12.18.2
-- NPM 6.14.5
+- Node 14.15.3
+- NPM 6.14.9
 
 ## Instalação
 Execute no terminal o comando `yarn`.

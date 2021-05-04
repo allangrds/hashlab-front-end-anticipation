@@ -3,7 +3,7 @@ import { CurrencyInput } from '../components'
 
 export default {
   component: CurrencyInput,
-  title: 'Example/CurrencyInput',
+  title: 'Components/CurrencyInput',
 }
 
 const Template = args => <CurrencyInput {...args} />
