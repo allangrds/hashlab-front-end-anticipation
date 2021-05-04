@@ -18,7 +18,7 @@ exports[`ValueToReceive should render correctly 1`] = `
     >
       Amanhã: 
       <b>
-        R$ 0,00
+        R$ 10,00
       </b>
     </p>
     <p
@@ -26,7 +26,7 @@ exports[`ValueToReceive should render correctly 1`] = `
     >
       Em 15 dias: 
       <b>
-        R$ 12,34
+        R$ 11,00
       </b>
     </p>
     <p
@@ -34,7 +34,7 @@ exports[`ValueToReceive should render correctly 1`] = `
     >
       Em 30 dias: 
       <b>
-        R$ 987,32
+        R$ 12,00
       </b>
     </p>
     <p
@@ -42,7 +42,171 @@ exports[`ValueToReceive should render correctly 1`] = `
     >
       Em 90 dias: 
       <b>
-        R$ 0,10
+        R$ 13,00
+      </b>
+    </p>
+  </aside>
+</div>
+`;
+
+exports[`ValueToReceive should render correctly without 15 days 1`] = `
+<div>
+  <aside
+    class="aside"
+  >
+    <p
+      class="title"
+    >
+      Você receberá
+    </p>
+    <hr
+      class="line"
+    />
+    <p
+      class="valueDay"
+    >
+      Amanhã: 
+      <b>
+        R$ 10,00
+      </b>
+    </p>
+    <p
+      class="valueDay"
+    >
+      Em 30 dias: 
+      <b>
+        R$ 12,00
+      </b>
+    </p>
+    <p
+      class="valueDay"
+    >
+      Em 90 dias: 
+      <b>
+        R$ 13,00
+      </b>
+    </p>
+  </aside>
+</div>
+`;
+
+exports[`ValueToReceive should render correctly without 30 days 1`] = `
+<div>
+  <aside
+    class="aside"
+  >
+    <p
+      class="title"
+    >
+      Você receberá
+    </p>
+    <hr
+      class="line"
+    />
+    <p
+      class="valueDay"
+    >
+      Amanhã: 
+      <b>
+        R$ 10,00
+      </b>
+    </p>
+    <p
+      class="valueDay"
+    >
+      Em 15 dias: 
+      <b>
+        R$ 11,00
+      </b>
+    </p>
+    <p
+      class="valueDay"
+    >
+      Em 90 dias: 
+      <b>
+        R$ 13,00
+      </b>
+    </p>
+  </aside>
+</div>
+`;
+
+exports[`ValueToReceive should render correctly without 90 days 1`] = `
+<div>
+  <aside
+    class="aside"
+  >
+    <p
+      class="title"
+    >
+      Você receberá
+    </p>
+    <hr
+      class="line"
+    />
+    <p
+      class="valueDay"
+    >
+      Amanhã: 
+      <b>
+        R$ 10,00
+      </b>
+    </p>
+    <p
+      class="valueDay"
+    >
+      Em 15 dias: 
+      <b>
+        R$ 11,00
+      </b>
+    </p>
+    <p
+      class="valueDay"
+    >
+      Em 30 dias: 
+      <b>
+        R$ 12,00
+      </b>
+    </p>
+  </aside>
+</div>
+`;
+
+exports[`ValueToReceive should render correctly without tomorrow 1`] = `
+<div>
+  <aside
+    class="aside"
+  >
+    <p
+      class="title"
+    >
+      Você receberá
+    </p>
+    <hr
+      class="line"
+    />
+    <p
+      class="valueDay"
+    >
+      Em 15 dias: 
+      <b>
+        R$ 11,00
+      </b>
+    </p>
+    <p
+      class="valueDay"
+    >
+      Em 30 dias: 
+      <b>
+        R$ 12,00
+      </b>
+    </p>
+    <p
+      class="valueDay"
+    >
+      Em 90 dias: 
+      <b>
+        R$ 13,00
       </b>
     </p>
   </aside>

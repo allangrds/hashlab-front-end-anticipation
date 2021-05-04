@@ -15,18 +15,34 @@ const ValueToReceive = ({
       Você receberá
     </p>
     <hr className={styles.line} />
-    <p className={styles.valueDay}>
-      Amanhã: <b>{centsToReal(tomorrow)}</b>
-    </p>
-    <p className={styles.valueDay}>
-      Em 15 dias: <b>{centsToReal(in15Days)}</b>
-    </p>
-    <p className={styles.valueDay}>
-      Em 30 dias: <b>{centsToReal(in30Days)}</b>
-    </p>
-    <p className={styles.valueDay}>
-      Em 90 dias: <b>{centsToReal(in90Days)}</b>
-    </p>
+    {
+      tomorrow && (
+        <p className={styles.valueDay}>
+          Amanhã: <b>{centsToReal(tomorrow)}</b>
+        </p>
+      )
+    }
+    {
+      in15Days && (
+        <p className={styles.valueDay}>
+          Em 15 dias: <b>{centsToReal(in15Days)}</b>
+        </p>
+      )
+    }
+    {
+      in30Days && (
+        <p className={styles.valueDay}>
+          Em 30 dias: <b>{centsToReal(in30Days)}</b>
+        </p>
+      )
+    }
+    {
+      in90Days && (
+        <p className={styles.valueDay}>
+          Em 90 dias: <b>{centsToReal(in90Days)}</b>
+        </p>
+      )
+    }
   </aside>
 )
 
@@ -38,10 +54,10 @@ ValueToReceive.propTypes = {
 }
 
 ValueToReceive.defaultProps = {
-  in15Days: 0,
-  in30Days: 0,
-  in90Days: 0,
-  tomorrow: 0,
+  in15Days: null,
+  in30Days: null,
+  in90Days: null,
+  tomorrow: null,
 }
 
 export default ValueToReceive
