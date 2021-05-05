@@ -1,6 +1,6 @@
 # Hash Teste Front-end
 
-Antes de começar, leia os nossos [key values](https://www.keyvalues.com/hash) para entender um pouco sobre o que nós priorizamos no desenvolvimento e **faça o seu melhor, pois iremos avaliar o teste como se fosse seu melhor esforço** ;)
+Antes de começar, leia a nossa [página sobre cultura](https://tech-culture.hash.com.br/) para entender um pouco sobre o que nós priorizamos no desenvolvimento e **faça o seu melhor, pois iremos avaliar o teste como se fosse seu melhor esforço** ;)
 
 Envie o resultado do seu desafio para dev@hash.com.br (ele pode ser open source!).
 Se possível, faça deploy da sua aplicação em algum serviço como [Netlify](https://www.netlify.com/), [Heroku](https://heroku.com/) ou qualquer outro de sua preferência.
@@ -60,6 +60,7 @@ Os possíveis cenários devem ser cobertos e terem soluções implementadas. Nã
 - Usuário estar offline
 
 ## Front
+
 O layout proposto para essa calculadora pode ser visto no link abaixo.
 
 [Link para o layout](https://www.figma.com/file/ipV80xJ29T7rdz0Aoo7xWv/Antecipation?node-id=0%3A1) - **Lembrando que a sua aplicação deve seguir o layout pixel by pixel**
@@ -68,22 +69,22 @@ O layout proposto para essa calculadora pode ser visto no link abaixo.
 
 Você consumirá uma API já existente no endereço abaixo. Em seguida há uma especificação simplificada dela.
 
-`https://hash-front-test.herokuapp.com/`
+`https://frontend-challenge-7bu3nxh76a-uc.a.run.app`
 
 ### Post
 
-| Parâmetro    | Obrigatório? | Tipo          | Descrição                                                                              |
-|--------------|----------|---------------|----------------------------------------------------------------------------------------|
-| `amount`       | Sim      | `number`        | Valor total da transação em centavos                                                   |
-| `installments` | Sim      | `number`        | Número de parcelas                                                                     |
-| `mdr`          | Sim      | `number`        | É a taxa cobrada pelas adquirentes sobre cada transação de cartão de crédito ou débito |
-| `days`         | Não      | `Array<number>` | Uma lista com os dias a serem calculadas as antecipações                               |
+| Parâmetro      | Obrigatório? | Tipo            | Descrição                                                                              |
+| -------------- | ------------ | --------------- | -------------------------------------------------------------------------------------- |
+| `amount`       | Sim          | `number`        | Valor total da transação em centavos                                                   |
+| `installments` | Sim          | `number`        | Número de parcelas                                                                     |
+| `mdr`          | Sim          | `number`        | É a taxa cobrada pelas adquirentes sobre cada transação de cartão de crédito ou débito |
+| `days`         | Não          | `Array<number>` | Uma lista com os dias a serem calculadas as antecipações                               |
 
 ### Exemplo
 
 ```bash
 $ curl --request POST \
-  --url https://hash-front-test.herokuapp.com/ \
+  --url https://frontend-challenge-7bu3nxh76a-uc.a.run.app \
   --header 'content-type: application/json' \
   --data '{
 	"amount": 15000,
@@ -98,7 +99,7 @@ $ curl --request POST \
 
 ```bash
 $ curl --request POST \
-  --url https://hash-front-test.herokuapp.com/ \
+  --url https://frontend-challenge-7bu3nxh76a-uc.a.run.app \
   --header 'content-type: application/json' \
   --data '{
 	"amount": 15000,
@@ -113,10 +114,10 @@ $ curl --request POST \
 ### Simulando Timeout, Internal Server Error e Delay de resposta
 
 Para **Timeout** basta executar a request post passando `timeout` através da query string, exemplo:
-`https://hash-front-test.herokuapp.com/?timeout`
+`https://frontend-challenge-7bu3nxh76a-uc.a.run.app?timeout`
 
 Para **Internal Server Error** basta executar a request post passando `internalError` através da query string, exemplo:
-`https://hash-front-test.herokuapp.com/?internalError`
+`https://frontend-challenge-7bu3nxh76a-uc.a.run.app?internalError`
 
 Para **Delay de resposta**, que pode ser usado como simulador de conexão lenta, basta executar a request post passando `delay`, e informando o tempo do delay em milissegundos, exemplo:
-`https://hash-front-test.herokuapp.com/?delay=tempoEmMilissegundos`
+`https://frontend-challenge-7bu3nxh76a-uc.a.run.app?delay=tempoEmMilissegundos`
