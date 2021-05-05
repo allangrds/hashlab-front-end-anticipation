@@ -1,0 +1,17 @@
+@import "../../assets/css/index.css";
+
+.button {
+  background-color: var(--color-blue-1);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  color: var(--color-white);
+  padding: 10px 14px;
+  transition: 0.1s;
+}
+
+.button:hover {
+  background-color: var(--color-blue-2);
+}

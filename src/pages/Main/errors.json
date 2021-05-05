@@ -1,0 +1,14 @@
+{
+  "408": {
+    "text": "Xiii...o servidor demorou muito pra responder. Tente mais tarde",
+    "type": "warning"
+  },
+  "500": {
+    "text": "Xiii...o servidor apresentou algum problema. Tente mais tarde",
+    "type": "error"
+  },
+  "others": {
+    "text": "Tivemos algum problema para fazer a simulação. Tente mais tarde",
+    "type": "error"
+  }
+}

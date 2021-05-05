@@ -17,7 +17,9 @@ function simulation (body, params) {
     },
     method: 'POST',
   })
-    .then(response => response.json())
+    .then(res => (
+      res.status === 200 && res.json ? res.json() : res
+    ))
 }
 
 const services = {

@@ -1,0 +1,24 @@
+@import "../../assets/css/index.css";
+
+.alert {
+  border-radius: 4px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  height: 58px;
+  padding: 20px 12px;
+}
+
+.info {
+  color: var(--color-white);
+  background-color: var(--color-blue-2);
+}
+
+.warning {
+  color: var(--color-white);
+  background-color: var(--color-orange-1);
+}
+
+.error {
+  color: var(--color-white);
+  background-color: var(--color-error);
+}

@@ -3,6 +3,8 @@
 
 .fieldset {
   border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .label {
@@ -46,4 +48,9 @@
   font-size: 11px;
   margin-top: 3px;
   margin-bottom: 0;
+}
+
+.error,
+.tip {
+  height: 11px;
 }

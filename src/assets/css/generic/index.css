@@ -22,7 +22,7 @@ html {
 
 body {
   margin: 0;
-  background-color: var(--color-background);
+  background: var(--color-background);
 }
 
 /**
@@ -352,3 +352,11 @@ template {
 * {
   box-sizing: border-box;
 }
+
+/* stylelint-disable */
+html,
+body,
+#root {
+  height: 100vh;
+}
+/* stylelint-enable */

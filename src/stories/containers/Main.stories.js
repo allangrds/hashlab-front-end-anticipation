@@ -1,15 +1,13 @@
 import React from 'react'
-import { Box } from '../components'
+import Main from '../../containers/Main'
 
 export default {
-  component: Box,
-  title: 'Components/Box',
+  component: Main,
+  title: 'Containers/Main',
 }
 
 const Template = args => (
-  <Box {...args}>
-    <p>Olá mundo</p>
-  </Box>
+  <Main {...args} />
 )
 
 export const Default = Template.bind({})

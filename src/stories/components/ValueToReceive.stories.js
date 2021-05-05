@@ -1,5 +1,5 @@
 import React from 'react'
-import ValueToReceive from '../containers/Main/ValueToReceive'
+import ValueToReceive from '../../containers/Main/ValueToReceive'
 
 export default {
   component: ValueToReceive,

@@ -11,11 +11,12 @@ test('services should correct format values', async () => {
   })
   jest.spyOn(global, 'fetch').mockImplementation(() => mockJsonPromise)
 
-  const result = await services.simulation({
+  const response = await services.simulation({
     amount: 10000,
     installments: 1,
     mdr: 0,
   })
+  const result = response.json()
 
   expect(result['1']).toEqual(10000)
   expect(result['15']).toEqual(11000)

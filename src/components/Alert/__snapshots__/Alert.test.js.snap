@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert error should render correctly 1`] = `
+<div>
+  <div
+    class="alert error"
+  >
+    Olá mundo
+  </div>
+</div>
+`;
+
+exports[`Alert info should render correctly 1`] = `
+<div>
+  <div
+    class="alert info"
+  >
+    Olá mundo
+  </div>
+</div>
+`;
+
+exports[`Alert warning should render correctly 1`] = `
+<div>
+  <div
+    class="alert warning"
+  >
+    Olá mundo
+  </div>
+</div>
+`;
