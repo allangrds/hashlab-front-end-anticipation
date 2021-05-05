@@ -39,19 +39,13 @@ const Main = () => {
     services.simulation(payload)
       .then((response) => {
         if (response.status && response.status !== 200) {
-          if (errorList[response.status].text) {
-            setAlert({
-              text: errorList[response.status].text,
-              type: errorList[response.status].type,
-            })
+          let error = errorList.others
 
-            return true
+          if (errorList[response.status]) {
+            error = errorList[response.status]
           }
 
-          setAlert({
-            text: errorList.others.text,
-            type: errorList.others.type,
-          })
+          setAlert(error)
 
           return true
         }
