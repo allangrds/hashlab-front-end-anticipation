@@ -8,7 +8,7 @@ test('Alert info should render correctly', () => {
 
   const {
     container,
-    getByText,
+    getByRole,
   } = render(
     <Alert
       type="info"
@@ -16,7 +16,7 @@ test('Alert info should render correctly', () => {
     />,
   )
 
-  getByText(text)
+  expect(getByRole('alert')).toHaveTextContent(text)
   expect(container).toMatchSnapshot()
 })
 
@@ -25,7 +25,7 @@ test('Alert warning should render correctly', () => {
 
   const {
     container,
-    getByText,
+    getByRole,
   } = render(
     <Alert
       type="warning"
@@ -33,7 +33,7 @@ test('Alert warning should render correctly', () => {
     />,
   )
 
-  getByText(text)
+  expect(getByRole('alert')).toHaveTextContent(text)
   expect(container).toMatchSnapshot()
 })
 
@@ -42,7 +42,7 @@ test('Alert error should render correctly', () => {
 
   const {
     container,
-    getByText,
+    getByRole,
   } = render(
     <Alert
       type="error"
@@ -50,6 +50,6 @@ test('Alert error should render correctly', () => {
     />,
   )
 
-  getByText(text)
+  expect(getByRole('alert')).toHaveTextContent(text)
   expect(container).toMatchSnapshot()
 })
