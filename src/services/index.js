@@ -22,8 +22,35 @@ function simulation (body, params) {
     ))
 }
 
+function simulationWithTimeout (body) {
+  const params = {
+    timeout: null,
+  }
+
+  return simulation(body, params)
+}
+
+function simulationWithInternalError (body) {
+  const params = {
+    internalError: null,
+  }
+
+  return simulation(body, params)
+}
+
+function simulationWithDelay (body) {
+  const params = {
+    delay: 3500,
+  }
+
+  return simulation(body, params)
+}
+
 const services = {
   simulation,
+  simulationWithDelay,
+  simulationWithInternalError,
+  simulationWithTimeout,
 }
 
 export default services

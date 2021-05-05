@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form should render correctly 1`] = `
+<div>
+  <div
+    class="anticipation_simulatioon"
+  >
+    <h2
+      class="title"
+    >
+      Simule sua Antecipação
+    </h2>
+    <div
+      class="input"
+    >
+      <fieldset
+        class="fieldset"
+      >
+        <label
+          class="label"
+          for="amount"
+        >
+          Informe o valor da venda
+           
+          *
+        </label>
+        <input
+          class="input"
+          id="amount"
+          type="text"
+          value="R$22,22"
+        />
+        <p
+          class="tip"
+        />
+      </fieldset>
+    </div>
+    <div
+      class="input"
+    >
+      <fieldset
+        class="fieldset"
+      >
+        <label
+          class="label"
+          for="installments"
+        >
+          Em quantas parcelas
+           
+          *
+        </label>
+        <input
+          class="input"
+          id="installments"
+          max="12"
+          min="1"
+          name="installments"
+          type="number"
+          value="1"
+        />
+        <p
+          class="tip"
+        >
+          Máximo de 12 parcelas
+        </p>
+      </fieldset>
+    </div>
+    <div
+      class="input"
+    >
+      <fieldset
+        class="fieldset"
+      >
+        <label
+          class="label"
+          for="mdr"
+        >
+          Informe o percentual de MDR
+           
+          *
+        </label>
+        <input
+          class="input"
+          id="mdr"
+          min="1"
+          name="mdr"
+          type="number"
+          value="0"
+        />
+        <p
+          class="tip"
+        />
+      </fieldset>
+    </div>
+    <button
+      class="button"
+      type="button"
+    >
+      Simular
+    </button>
+  </div>
+</div>
+`;
