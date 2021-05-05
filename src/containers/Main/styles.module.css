@@ -1,0 +1,57 @@
+@import "../../assets/css/index.css";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.container {
+  max-width: 650px;
+  width: 100%;
+}
+
+.alert {
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+}
+
+@media only screen and (max-width: 630px) {
+  .grid {
+    grid-template-rows: 1fr 250px;
+  }
+}
+
+@media only screen and (min-width: 631px) {
+  .grid {
+    grid-template-columns: 400px 1fr;
+  }
+}
+
+
+/* Simular antecipacao */
+
+.anticipation_simulatioon {
+  padding: 41px 56px;
+}
+
+.title {
+  color: var(--color-gray-1);
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 22px;
+  margin-top: 0;
+}
+
+.input:not(:last-child) {
+  margin-bottom: 26px;
+}

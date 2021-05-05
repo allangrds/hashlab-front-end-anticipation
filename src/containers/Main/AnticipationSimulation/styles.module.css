@@ -1,0 +1,20 @@
+@import "../../../assets/css/index.css";
+
+.anticipation_simulatioon {
+  padding: 41px 56px;
+}
+
+.title {
+  color: var(--color-gray-1);
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 22px;
+  margin-top: 0;
+}
+
+.input:not(:last-child) {
+  margin-bottom: 26px;
+}
