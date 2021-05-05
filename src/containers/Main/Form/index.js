@@ -9,7 +9,7 @@ import styles from './styles.module.css'
 import validation from './validation'
 import maskedValueToCents from '../../../utils/helpers/maskedValueToCents'
 
-const AnticipationSimulation = ({
+const Form = ({
   onClick,
 }) => {
   const [formValues, setFormValues] = useState({
@@ -32,12 +32,11 @@ const AnticipationSimulation = ({
 
   function handleClick () {
     const errors = validation(formValues)
-
-    if (
-      !errors.amount
+    const noErrors = !errors.amount
       && !errors.installments
       && !errors.mdr
-    ) {
+
+    if (noErrors) {
       onClick({
         ...formValues,
         amount: maskedValueToCents(formValues.amount),
@@ -97,8 +96,8 @@ const AnticipationSimulation = ({
   )
 }
 
-AnticipationSimulation.propTypes = {
+Form.propTypes = {
   onClick: PropTypes.func.isRequired,
 }
 
-export default AnticipationSimulation
+export default Form

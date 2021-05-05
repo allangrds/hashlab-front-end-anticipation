@@ -6,7 +6,7 @@ import {
   Box,
 } from '../../components'
 import ValueToReceive from './ValueToReceive'
-import AnticipationSimulation from './AnticipationSimulation'
+import Form from './Form'
 
 import styles from './styles.module.css'
 
@@ -24,7 +24,7 @@ const Main = ({
       />
       <Box>
         <div className={styles.grid}>
-          <AnticipationSimulation
+          <Form
             onClick={onClick}
           />
           <ValueToReceive
