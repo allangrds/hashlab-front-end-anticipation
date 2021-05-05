@@ -353,8 +353,10 @@ template {
   box-sizing: border-box;
 }
 
-html
+/* stylelint-disable */
+html,
 body,
 #root {
   height: 100vh;
 }
+/* stylelint-enable */
