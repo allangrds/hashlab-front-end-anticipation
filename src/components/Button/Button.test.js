@@ -10,7 +10,7 @@ test('Button should render and be updated correctly', () => {
 
   const {
     container,
-    getByText,
+    getByRole,
   } = render(
     <Button
       text={text}
@@ -20,7 +20,7 @@ test('Button should render and be updated correctly', () => {
 
   expect(callback).toHaveBeenCalledTimes(0)
 
-  const button = getByText(text)
+  const button = getByRole('button')
   userEvent.click(button)
 
   expect(callback).toHaveBeenCalledTimes(1)

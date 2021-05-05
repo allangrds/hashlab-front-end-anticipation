@@ -26,6 +26,7 @@ const Main = ({
         <div className={styles.grid}>
           <Form
             onClick={onClick}
+            loading={alert.type === 'info'}
           />
           <ValueToReceive
             in15Days={anticipationValues[15]}

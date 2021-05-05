@@ -10,11 +10,13 @@ const Alert = ({
   type,
 }) => (
   (
-    <div className={classNames(
-      className,
-      styles.alert,
-      styles[type],
-    )}
+    <div
+      role="alert"
+      className={classNames(
+        className,
+        styles.alert,
+        styles[type],
+      )}
     >
       { text }
     </div>

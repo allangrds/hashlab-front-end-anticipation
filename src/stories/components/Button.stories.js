@@ -16,3 +16,11 @@ Default.args = {
   onClick: () => alert('Clicou'),
   text: 'Botão',
 }
+
+export const Disabled = Template.bind({})
+
+Disabled.args = {
+  disabled: true,
+  onClick: () => alert('Clicou'),
+  text: 'Botão',
+}
