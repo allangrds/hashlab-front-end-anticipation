@@ -10,6 +10,7 @@ import validation from './validation'
 import maskedValueToCents from '../../../utils/helpers/maskedValueToCents'
 
 const Form = ({
+  loading,
   onClick,
 }) => {
   const [formValues, setFormValues] = useState({
@@ -89,6 +90,7 @@ const Form = ({
         />
       </div>
       <Button
+        disabled={loading}
         onClick={handleClick}
         text="Simular"
       />
@@ -97,6 +99,7 @@ const Form = ({
 }
 
 Form.propTypes = {
+  loading: PropTypes.bool.isRequired,
   onClick: PropTypes.func.isRequired,
 }
 
