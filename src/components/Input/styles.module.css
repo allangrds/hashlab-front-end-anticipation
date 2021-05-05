@@ -49,3 +49,8 @@
   margin-top: 3px;
   margin-bottom: 0;
 }
+
+.error,
+.tip {
+  height: 11px;
+}

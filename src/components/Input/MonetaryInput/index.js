@@ -8,14 +8,10 @@ const MonetaryInput = ({
   onChange,
   value,
 }) => {
-  function handleChange (event, maskedValue, floatvValue) {
-    const newValue = floatvValue
-      ? parseInt(floatvValue.toString().replace(/[^\w\s]/gi, ''), 10)
-      : floatvValue
-
+  function handleChange (event, maskedValue) {
     const payload = {
       name,
-      value: newValue,
+      value: maskedValue,
     }
 
     onChange(payload)
@@ -30,6 +26,7 @@ const MonetaryInput = ({
       id={name}
       className={className}
       value={value}
+      precision="2"
     />
   )
 }
