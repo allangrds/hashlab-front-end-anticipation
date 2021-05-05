@@ -28,10 +28,6 @@ const Input = ({
     ? MonetaryInput
     : DefaultInput
 
-  function handleOnChange (obj) {
-    onChange(obj)
-  }
-
   return (
     <fieldset className={styles.fieldset}>
       <label
@@ -44,7 +40,7 @@ const Input = ({
         className={inputClassName}
         id={name}
         name={name}
-        onChange={handleOnChange}
+        onChange={onChange}
         type={type}
         value={value}
         {...rest}

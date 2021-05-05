@@ -26,6 +26,7 @@ const DefaultInput = ({
       onChange={handleOnChange}
       name={name}
       type={type}
+      value={value}
       {...rest}
     />
   )

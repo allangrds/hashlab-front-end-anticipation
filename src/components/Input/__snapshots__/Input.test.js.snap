@@ -18,6 +18,7 @@ exports[`Input/DefaultInput should render and be updated correctly 1`] = `
       id="installments"
       name="installments"
       type="text"
+      value=""
     />
     <p
       class="tip"
@@ -46,6 +47,7 @@ exports[`Input/DefaultInput should render with error message 1`] = `
       id="installments"
       name="installments"
       type="text"
+      value=""
     />
     <p
       class="error"
