@@ -11,7 +11,7 @@ test('Box should render and be updated correctly', () => {
     getByText,
   } = render(
     <Box>
-      <p>Olá mundo</p>
+      <p>{text}</p>
     </Box>,
   )
 
