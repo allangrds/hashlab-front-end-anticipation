@@ -8,6 +8,8 @@ import styles from './styles.module.css'
 const Input = ({
   errorMessage,
   label,
+  name,
+  onChange,
   required,
   tip,
 }) => {
@@ -19,19 +21,33 @@ const Input = ({
     ? classNames(styles.input, styles['input-error'])
     : styles.input
 
+  function handleChange (event, maskedValue, floatvValue) {
+    const value = floatvValue
+      ? floatvValue.toString().replace(/[^\w\s]/gi, '')
+      : floatvValue
+
+    const payload = {
+      name,
+      value,
+    }
+
+    onChange(payload)
+  }
+
   return (
     <fieldset className={styles.fieldset}>
       <label
         className={styles.label}
-        htmlFor="Aname"
+        htmlFor={name}
       >
         { label } { required && '*' }
       </label>
       <CurrencyInput
+        onChangeEvent={handleChange}
         decimalSeparator=","
         thousandSeparator="."
         prefix="R$"
-        id="Aname"
+        id={name}
         className={inputClassName}
       />
       <p className={bottomClassName}>
@@ -44,6 +60,8 @@ const Input = ({
 Input.propTypes = {
   errorMessage: PropTypes.string,
   label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
   required: PropTypes.bool,
   tip: PropTypes.string,
 }

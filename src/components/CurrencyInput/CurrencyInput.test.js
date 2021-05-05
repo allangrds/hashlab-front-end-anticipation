@@ -5,8 +5,11 @@ import userEvent from '@testing-library/user-event'
 import CurrencyInput from '.'
 
 test('CurrencyInput should render and be updated correctly', () => {
+  const callback = jest.fn()
   const props = {
     label: 'Esse é o label',
+    name: 'installments',
+    onChange: callback,
     required: true,
     tip: 'Máximo de 12 parcelas',
   }
@@ -23,12 +26,16 @@ test('CurrencyInput should render and be updated correctly', () => {
     <CurrencyInput {...props} />,
   )
 
+  expect(callback).toHaveBeenCalledTimes(0)
+
   getByLabelText(`${props.label} *`)
   getByText(props.tip)
 
   const input = getByDisplayValue(initialValue)
 
   userEvent.type(input, newRawValue)
+
+  expect(callback).toHaveBeenCalledTimes(3)
 
   getByDisplayValue(newFormatedValue)
 

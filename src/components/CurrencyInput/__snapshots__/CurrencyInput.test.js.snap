@@ -7,7 +7,7 @@ exports[`CurrencyInput should render and be updated correctly 1`] = `
   >
     <label
       class="label"
-      for="Aname"
+      for="installments"
     >
       Esse é o label
        
@@ -15,7 +15,7 @@ exports[`CurrencyInput should render and be updated correctly 1`] = `
     </label>
     <input
       class="input"
-      id="Aname"
+      id="installments"
       type="text"
       value="R$1,23"
     />
@@ -35,7 +35,6 @@ exports[`CurrencyInput should render with error message 1`] = `
   >
     <label
       class="label"
-      for="Aname"
     >
       Esse é o label
        
@@ -43,7 +42,6 @@ exports[`CurrencyInput should render with error message 1`] = `
     </label>
     <input
       class="input input-error"
-      id="Aname"
       type="text"
       value="R$0,00"
     />
