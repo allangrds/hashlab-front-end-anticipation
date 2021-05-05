@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input/DefaultInput should render and be updated correctly 1`] = `
+<div>
+  <fieldset
+    class="fieldset"
+  >
+    <label
+      class="label"
+      for="installments"
+    >
+      Esse é o label
+       
+      *
+    </label>
+    <input
+      class="input"
+      id="installments"
+      name="installments"
+      type="text"
+    />
+    <p
+      class="tip"
+    >
+      Máximo de 12 parcelas
+    </p>
+  </fieldset>
+</div>
+`;
+
+exports[`Input/DefaultInput should render with error message 1`] = `
+<div>
+  <fieldset
+    class="fieldset"
+  >
+    <label
+      class="label"
+      for="installments"
+    >
+      Esse é o label
+       
+      *
+    </label>
+    <input
+      class="input input-error"
+      id="installments"
+      name="installments"
+      type="text"
+    />
+    <p
+      class="error"
+    >
+      Mensagem de erro
+    </p>
+  </fieldset>
+</div>
+`;
+
+exports[`Input/MoneyInput should render and be updated correctly 1`] = `
+<div>
+  <fieldset
+    class="fieldset"
+  >
+    <label
+      class="label"
+      for="installments"
+    >
+      Esse é o label
+       
+      *
+    </label>
+    <input
+      class="input"
+      id="installments"
+      type="text"
+      value="R$1,23"
+    />
+    <p
+      class="tip"
+    >
+      Máximo de 12 parcelas
+    </p>
+  </fieldset>
+</div>
+`;
+
+exports[`Input/MoneyInput should render with error message 1`] = `
+<div>
+  <fieldset
+    class="fieldset"
+  >
+    <label
+      class="label"
+      for="installments"
+    >
+      Esse é o label
+       
+      *
+    </label>
+    <input
+      class="input input-error"
+      id="installments"
+      type="text"
+      value=""
+    />
+    <p
+      class="error"
+    >
+      Mensagem de erro
+    </p>
+  </fieldset>
+</div>
+`;

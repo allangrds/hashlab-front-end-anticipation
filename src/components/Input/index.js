@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import CurrencyInput from 'react-currency-input'
 import classNames from 'classnames'
 
+import MonetaryInput from './MonetaryInput'
+import DefaultInput from './DefaultInput'
 import styles from './styles.module.css'
 
 const Input = ({
@@ -12,6 +13,9 @@ const Input = ({
   onChange,
   required,
   tip,
+  type,
+  value,
+  ...rest
 }) => {
   const bottomText = errorMessage || tip
   const bottomClassName = errorMessage
@@ -20,18 +24,12 @@ const Input = ({
   const inputClassName = errorMessage
     ? classNames(styles.input, styles['input-error'])
     : styles.input
+  const SelectedInput = type === 'money'
+    ? MonetaryInput
+    : DefaultInput
 
-  function handleChange (event, maskedValue, floatvValue) {
-    const value = floatvValue
-      ? floatvValue.toString().replace(/[^\w\s]/gi, '')
-      : floatvValue
-
-    const payload = {
-      name,
-      value,
-    }
-
-    onChange(payload)
+  function handleOnChange (obj) {
+    onChange(obj)
   }
 
   return (
@@ -42,13 +40,14 @@ const Input = ({
       >
         { label } { required && '*' }
       </label>
-      <CurrencyInput
-        onChangeEvent={handleChange}
-        decimalSeparator=","
-        thousandSeparator="."
-        prefix="R$"
-        id={name}
+      <SelectedInput
         className={inputClassName}
+        id={name}
+        name={name}
+        onChange={handleOnChange}
+        type={type}
+        value={value}
+        {...rest}
       />
       <p className={bottomClassName}>
         { bottomText }
@@ -64,12 +63,18 @@ Input.propTypes = {
   onChange: PropTypes.func.isRequired,
   required: PropTypes.bool,
   tip: PropTypes.string,
+  type: PropTypes.string.isRequired,
+  value: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+  ]),
 }
 
 Input.defaultProps = {
   errorMessage: null,
   required: false,
   tip: null,
+  value: null,
 }
 
 export default Input

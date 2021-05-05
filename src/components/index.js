@@ -1,7 +1,7 @@
 import Box from './Box'
-import CurrencyInput from './CurrencyInput'
+import Input from './Input'
 
 export {
   Box,
-  CurrencyInput,
+  Input,
 }
