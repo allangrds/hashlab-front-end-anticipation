@@ -18,6 +18,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "npm run test -- --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "commit": "npx git-cz",
     "eslint": "eslint './src/**/*.js'",
@@ -25,6 +26,18 @@
     "lint": "npm run eslint && npm run stylelint",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/assets/*.{js,jsx}",
+      "!src/pages/**/*.{js,jsx}",
+      "!src/stories/*.{js,jsx}",
+      "!src/index.js",
+      "!src/App.js",
+      "!src/reportWebVitals.js",
+      "!**/node_modules/**"
+    ]
   },
   "eslintConfig": {
     "extends": [
