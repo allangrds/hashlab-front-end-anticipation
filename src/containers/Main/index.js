@@ -29,10 +29,7 @@ const Main = ({
             loading={alert.type === 'info'}
           />
           <ValueToReceive
-            in15Days={anticipationValues[15]}
-            in30Days={anticipationValues[30]}
-            in90Days={anticipationValues[90]}
-            tomorrow={anticipationValues[1]}
+            anticipationValues={anticipationValues}
           />
         </div>
       </Box>
@@ -48,13 +45,8 @@ Main.propTypes = {
       'warning',
       'error',
     ]),
-  }),
-  anticipationValues: PropTypes.shape({
-    1: PropTypes.number,
-    15: PropTypes.number,
-    30: PropTypes.number,
-    90: PropTypes.number,
-  }),
+  }), // eslint-disable-next-line react/forbid-prop-types
+  anticipationValues: PropTypes.object,
   onClick: PropTypes.func.isRequired,
 }
 

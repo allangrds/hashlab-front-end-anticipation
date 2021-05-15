@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 const DefaultInput = ({
   className,
   name,
+  onBlur,
   onChange,
   type,
   value,
@@ -23,6 +24,7 @@ const DefaultInput = ({
     <input
       id={name}
       className={className}
+      onBlur={handleOnChange}
       onChange={handleOnChange}
       name={name}
       type={type}
@@ -35,6 +37,7 @@ const DefaultInput = ({
 DefaultInput.propTypes = {
   className: PropTypes.node.isRequired,
   name: PropTypes.string.isRequired,
+  onBlur: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
   type: PropTypes.string.isRequired,
   value: PropTypes.oneOfType([
