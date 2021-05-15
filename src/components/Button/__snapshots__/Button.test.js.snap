@@ -4,7 +4,7 @@ exports[`Button should render and be updated correctly 1`] = `
 <div>
   <button
     class="button"
-    type="button"
+    type="submit"
   >
     Botão
   </button>

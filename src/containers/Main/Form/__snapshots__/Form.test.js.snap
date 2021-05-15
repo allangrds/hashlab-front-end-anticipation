@@ -10,94 +10,96 @@ exports[`Form should render correctly 1`] = `
     >
       Simule sua Antecipação
     </h2>
-    <div
-      class="input"
-    >
-      <fieldset
-        class="fieldset"
+    <form>
+      <div
+        class="input"
       >
-        <label
-          class="label"
-          for="amount"
+        <fieldset
+          class="fieldset"
         >
-          Informe o valor da venda
-           
-          *
-        </label>
-        <input
-          class="input"
-          id="amount"
-          type="text"
-          value="R$22,22"
-        />
-        <p
-          class="tip"
-        />
-      </fieldset>
-    </div>
-    <div
-      class="input"
-    >
-      <fieldset
-        class="fieldset"
+          <label
+            class="label"
+            for="amount"
+          >
+            Informe o valor da venda
+             
+            *
+          </label>
+          <input
+            class="input"
+            id="amount"
+            type="text"
+            value="R$22,22"
+          />
+          <p
+            class="tip"
+          />
+        </fieldset>
+      </div>
+      <div
+        class="input"
       >
-        <label
-          class="label"
-          for="installments"
+        <fieldset
+          class="fieldset"
         >
-          Em quantas parcelas
-           
-          *
-        </label>
-        <input
-          class="input"
-          id="installments"
-          max="12"
-          min="1"
-          name="installments"
-          type="number"
-          value="1"
-        />
-        <p
-          class="tip"
-        >
-          Máximo de 12 parcelas
-        </p>
-      </fieldset>
-    </div>
-    <div
-      class="input"
-    >
-      <fieldset
-        class="fieldset"
+          <label
+            class="label"
+            for="installments"
+          >
+            Em quantas parcelas
+             
+            *
+          </label>
+          <input
+            class="input"
+            id="installments"
+            max="12"
+            min="1"
+            name="installments"
+            type="number"
+            value="1"
+          />
+          <p
+            class="tip"
+          >
+            Máximo de 12 parcelas
+          </p>
+        </fieldset>
+      </div>
+      <div
+        class="input"
       >
-        <label
-          class="label"
-          for="mdr"
+        <fieldset
+          class="fieldset"
         >
-          Informe o percentual de MDR
-           
-          *
-        </label>
-        <input
-          class="input"
-          id="mdr"
-          min="1"
-          name="mdr"
-          type="number"
-          value="0"
-        />
-        <p
-          class="tip"
-        />
-      </fieldset>
-    </div>
-    <button
-      class="button"
-      type="button"
-    >
-      Simular
-    </button>
+          <label
+            class="label"
+            for="mdr"
+          >
+            Informe o percentual de MDR
+             
+            *
+          </label>
+          <input
+            class="input"
+            id="mdr"
+            min="1"
+            name="mdr"
+            type="number"
+            value="0"
+          />
+          <p
+            class="tip"
+          />
+        </fieldset>
+      </div>
+      <button
+        class="button"
+        type="submit"
+      >
+        Simular
+      </button>
+    </form>
   </div>
 </div>
 `;
