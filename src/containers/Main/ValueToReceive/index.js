@@ -4,11 +4,18 @@ import PropTypes from 'prop-types'
 import centsToReal from '../../../utils/helpers/centsToReal'
 import styles from './styles.module.css'
 
+function getLabelFromDay (day) {
+  const parsedDay = parseInt(day, 10)
+
+  if (parsedDay === 1) {
+    return 'Amanhã'
+  }
+
+  return `Em ${parsedDay} dias`
+}
+
 const ValueToReceive = ({
-  in15Days,
-  in30Days,
-  in90Days,
-  tomorrow,
+  anticipationValues,
 }) => (
   <aside className={styles.aside}>
     <p className={styles.title}>
@@ -16,48 +23,24 @@ const ValueToReceive = ({
     </p>
     <hr className={styles.line} />
     {
-      tomorrow && (
-        <p className={styles.valueDay}>
-          Amanhã: <b>{centsToReal(tomorrow)}</b>
-        </p>
-      )
-    }
-    {
-      in15Days && (
-        <p className={styles.valueDay}>
-          Em 15 dias: <b>{centsToReal(in15Days)}</b>
-        </p>
-      )
-    }
-    {
-      in30Days && (
-        <p className={styles.valueDay}>
-          Em 30 dias: <b>{centsToReal(in30Days)}</b>
-        </p>
-      )
-    }
-    {
-      in90Days && (
-        <p className={styles.valueDay}>
-          Em 90 dias: <b>{centsToReal(in90Days)}</b>
-        </p>
-      )
-    }
+        Object.entries(anticipationValues).map(arr => (
+          <p className={styles.valueDay} key={arr[0]}>
+            { getLabelFromDay(arr[0]) }:
+            <b>
+              { centsToReal(anticipationValues[arr[0]]) }
+            </b>
+          </p>
+        ))
+      }
   </aside>
 )
 
-ValueToReceive.propTypes = {
-  in15Days: PropTypes.number,
-  in30Days: PropTypes.number,
-  in90Days: PropTypes.number,
-  tomorrow: PropTypes.number,
+ValueToReceive.propTypes = { // eslint-disable-next-line react/forbid-prop-types
+  anticipationValues: PropTypes.object,
 }
 
 ValueToReceive.defaultProps = {
-  in15Days: null,
-  in30Days: null,
-  in90Days: null,
-  tomorrow: null,
+  anticipationValues: {},
 }
 
 export default ValueToReceive

@@ -11,8 +11,10 @@ const Template = args => <ValueToReceive {...args} />
 export const Default = Template.bind({})
 
 Default.args = {
-  in15Days: 11000,
-  in30Days: 12000,
-  in90Days: 13000,
-  tomorrow: 10000,
+  anticipationValues: {
+    1: 10000,
+    15: 5000,
+    30: 2500,
+    90: 1250,
+  },
 }

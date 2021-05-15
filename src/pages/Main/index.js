@@ -19,9 +19,22 @@ function getAnticipationDays () {
   }
 }
 
+function getDefaultAnticipationDaysValues () {
+  const { days } = getAnticipationDays()
+  const daysObject = {}
+
+  days.forEach((element) => {
+    daysObject[element] = 0
+  })
+
+  return daysObject
+}
+
 const Main = () => {
   const [alert, setAlert] = useState({})
-  const [anticipationValues, setAnticipationValues] = useState({})
+  const [anticipationValues, setAnticipationValues] = useState(
+    getDefaultAnticipationDaysValues(),
+  )
 
   function handleOnClick (values) {
     const days = getAnticipationDays()
