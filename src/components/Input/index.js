@@ -10,6 +10,7 @@ const Input = ({
   errorMessage,
   label,
   name,
+  onBlur,
   onChange,
   required,
   tip,
@@ -40,6 +41,7 @@ const Input = ({
         className={inputClassName}
         id={name}
         name={name}
+        onBlur={onChange}
         onChange={onChange}
         type={type}
         value={value}
@@ -56,6 +58,7 @@ Input.propTypes = {
   errorMessage: PropTypes.string,
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+  onBlur: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
   required: PropTypes.bool,
   tip: PropTypes.string,

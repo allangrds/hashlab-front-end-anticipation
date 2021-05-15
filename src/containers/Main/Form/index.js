@@ -25,9 +25,16 @@ const Form = ({
   })
 
   function handleChange (input) {
-    setFormValues({
+    const newFormValues = {
       ...formValues,
       [input.name]: input.value,
+    }
+    setFormValues(newFormValues)
+
+    const errors = validation(newFormValues)
+    setFormErrors({
+      ...formErrors,
+      [input.name]: errors[input.name],
     })
   }
 
@@ -58,6 +65,7 @@ const Form = ({
         <div className={styles.input}>
           <Input
             onChange={handleChange}
+            onBlur={handleChange}
             name="amount"
             type="money"
             label="Informe o valor da venda"
@@ -69,6 +77,7 @@ const Form = ({
         <div className={styles.input}>
           <Input
             onChange={handleChange}
+            onBlur={handleChange}
             name="installments"
             type="number"
             label="Em quantas parcelas"
@@ -83,6 +92,7 @@ const Form = ({
         <div className={styles.input}>
           <Input
             onChange={handleChange}
+            onBlur={handleChange}
             name="mdr"
             type="number"
             label="Informe o percentual de MDR"
