@@ -10,7 +10,7 @@ const Button = ({
 }) => (
   <button
     className={styles.button}
-    type="button"
+    type="submit"
     onClick={onClick}
     disabled={disabled}
   >

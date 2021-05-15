@@ -31,7 +31,9 @@ const Form = ({
     })
   }
 
-  function handleClick () {
+  function handleSubmit (e) {
+    e.preventDefault()
+
     const errors = validation(formValues)
     const noErrors = !errors.amount
       && !errors.installments
@@ -52,48 +54,49 @@ const Form = ({
       <h2 className={styles.title}>
         Simule sua Antecipação
       </h2>
-      <div className={styles.input}>
-        <Input
-          onChange={handleChange}
-          name="amount"
-          type="money"
-          label="Informe o valor da venda"
-          required
-          value={formValues.amount}
-          errorMessage={formErrors.amount}
+      <form onSubmit={handleSubmit}>
+        <div className={styles.input}>
+          <Input
+            onChange={handleChange}
+            name="amount"
+            type="money"
+            label="Informe o valor da venda"
+            required
+            value={formValues.amount}
+            errorMessage={formErrors.amount}
+          />
+        </div>
+        <div className={styles.input}>
+          <Input
+            onChange={handleChange}
+            name="installments"
+            type="number"
+            label="Em quantas parcelas"
+            required
+            tip="Máximo de 12 parcelas"
+            min="1"
+            max="12"
+            value={formValues.installments}
+            errorMessage={formErrors.installments}
+          />
+        </div>
+        <div className={styles.input}>
+          <Input
+            onChange={handleChange}
+            name="mdr"
+            type="number"
+            label="Informe o percentual de MDR"
+            required
+            min="1"
+            value={formValues.mdr}
+            errorMessage={formErrors.mdr}
+          />
+        </div>
+        <Button
+          disabled={loading}
+          text="Simular"
         />
-      </div>
-      <div className={styles.input}>
-        <Input
-          onChange={handleChange}
-          name="installments"
-          type="number"
-          label="Em quantas parcelas"
-          required
-          tip="Máximo de 12 parcelas"
-          min="1"
-          max="12"
-          value={formValues.installments}
-          errorMessage={formErrors.installments}
-        />
-      </div>
-      <div className={styles.input}>
-        <Input
-          onChange={handleChange}
-          name="mdr"
-          type="number"
-          label="Informe o percentual de MDR"
-          required
-          min="1"
-          value={formValues.mdr}
-          errorMessage={formErrors.mdr}
-        />
-      </div>
-      <Button
-        disabled={loading}
-        onClick={handleClick}
-        text="Simular"
-      />
+      </form>
     </div>
   )
 }
